@@ -20,7 +20,7 @@ except ImportError:
     )
     raise
 
-APP_TITLE = "PamFlow Desktop v1.0"
+APP_TITLE = "pamflow Desktop v1.0"
 DEFAULT_PAMFLOW_DIR = r"C:\Users\maria.toro\Documents\pamflow"
 CONFIG_FILE = Path(__file__).with_name("pamflow_desktop_config.json")
 LOGO_FILE = Path(__file__).with_name("pamflow_logo.png")
@@ -212,13 +212,13 @@ class PamFlowDesktop(ctk.CTk):
         if self.logo_image is None:
             title = ctk.CTkLabel(
                 header,
-                text="PamFlow Desktop",
+                text="pamflow Desktop",
                 font=ctk.CTkFont(family=FUENTE_APP, size=30, weight="bold"),
             )
             title.grid(row=0, column=0, padx=24, pady=(18, 2), sticky="w")
             subtitle = ctk.CTkLabel(
                 header,
-                text="Modern launcher for running PamFlow pipelines",
+                text="Modern launcher for running pamflow pipelines",
                 text_color=("gray35", "gray70"),
                 font=ctk.CTkFont(family=FUENTE_APP, size=14),
             )
@@ -230,7 +230,7 @@ class PamFlowDesktop(ctk.CTk):
         body.grid_columnconfigure(1, weight=1)
         body.grid_rowconfigure(9, weight=1)
 
-        self.add_path_row(body, 0, "PamFlow folder", self.pamflow_dir, self.select_pamflow_dir, "Select the folder containing Kedro/PamFlow")
+        self.add_path_row(body, 0, "pamflow folder", self.pamflow_dir, self.select_pamflow_dir, "Select the folder containing Kedro/PamFlow")
         self.add_path_row(body, 1, "Audio folder", self.audio_dir, self.select_audio_dir, "Root folder with subfolders by recorder")
         self.add_path_row(body, 2, "Deployment sheet (.xlsx)", self.deployment_file, self.select_deployment_file, "Excel file containing the recorderID column")
         self.add_path_row(body, 3, "Target species (.csv)", self.target_species, self.select_target_file, "Optional")
@@ -301,7 +301,7 @@ class PamFlowDesktop(ctk.CTk):
 
         ctk.CTkButton(
             actions,
-            text="▶ Run PamFlow",
+            text="▶ Run pamflow",
             command=self.run_pamflow,
             height=42,
             font=ctk.CTkFont(family=FUENTE_APP, size=14, weight="bold"),
