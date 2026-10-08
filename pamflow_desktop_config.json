@@ -1,0 +1,10 @@
+{
+  "pamflow_dir": "C:\\Users\\maria.toro\\Documents\\pamflow",
+  "audio_dir": "E:/Mojana D2",
+  "deployment_file": "C:/Users/maria.toro/Documents/pamflow/data/input/field_deployments_sheet_Mojana.xlsx",
+  "target_species": "C:/Users/maria.toro/Desktop/TargetSpecies.csv",
+  "timezone": "America/Bogota",
+  "pipeline": "Export",
+  "node": "Export observations to GBIF",
+  "run_mode": "Selected node only"
+}
