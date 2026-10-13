@@ -581,7 +581,12 @@ class PamFlowDesktop(ctk.CTk):
     def open_output(self):
         output = Path(self.pamflow_dir.get()) / "data" / "output"
         if output.exists():
-            os.startfile(output)
+            if sys.platform.startswith("win"):
+                os.startfile(output)
+            elif sys.platform == "darwin":
+                subprocess.Popen(["open", str(output)])
+            else:
+                subprocess.Popen(["xdg-open", str(output)])
         else:
             messagebox.showinfo("Output", "The data/output folder does not exist yet.")
 
