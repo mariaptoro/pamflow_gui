@@ -41,6 +41,7 @@ PIPELINE_NODES = {
             "Sensor performance": "plot_sensor_performance_node",
             "Sensor location": "plot_sensor_location_node",
             "Survey effort": "plot_survey_effort_node",
+            "Audio outliers": "detect_audio_outliers_node",
             "Timelapse": "get_timelapse_node",
         },
     },
@@ -68,11 +69,13 @@ PIPELINE_NODES = {
             "Graphical soundscape": "graphical_soundscape_node",
         },
     },
-    "Data science": {
-        "pipeline": "data_science",
+    "Detection validation": {
+        "pipeline": "detection_validation",
         "nodes": {
-            "Find thresholds": "find_thresholds_node",
-            "Build train/test dataset": "build_train_test_dataset_node",
+            "Compile manual annotations": "compile_manual_annotations_node",
+            "Fit precision models": "fit_precision_models_node",
+            "Recommend thresholds": "recommend_thresholds_node",
+            "Plot precision models": "plot_precision_models_node",
         },
     },
     "Export": {
@@ -81,7 +84,6 @@ PIPELINE_NODES = {
             "Export media to GBIF": "from_media_to_media_gbif_node",
             "Export deployments to GBIF": "from_deployments_to_deployments_gbif_node",
             "Export observations to GBIF": "from_observations_to_observations_gbif_node",
-            "Export CSA events": "from_deployments_to_CSA_eventos_node",
         },
     },
 }
